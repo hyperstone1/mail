@@ -1,0 +1,107 @@
+.navbar {
+  .navbar-nav {
+    .nav-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
+.accordion {
+  overflow: auto;
+  height: 90%;
+}
+.accordion-header {
+  .accordion-button {
+    &:focus {
+      outline: none;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.messages {
+  position: relative;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .container {
+    justify-content: end;
+  }
+
+  .all_messages {
+    position: relative;
+    margin-top: 100px;
+    height: 500px;
+    width: 60%;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    .nav {
+      position: relative;
+      align-items: center;
+      margin-top: -2px;
+      margin-left: -2px;
+      .nav-item {
+        position: relative;
+
+        .nav-link {
+          padding: 15px 10px 10px 15px;
+        }
+      }
+
+      .btn {
+        position: absolute;
+        right: 5px;
+        padding: 3px 5px;
+        svg {
+          height: 23px;
+          width: 23px;
+        }
+      }
+    }
+  }
+  .message {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    cursor: pointer;
+    .mail {
+      padding: 10px 0;
+      height: 100%;
+      width: 100%;
+      padding-left: 25px;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 0;
+      b {
+        color: #747474;
+        font-weight: 700;
+      }
+    }
+    .time {
+      padding-right: 25px;
+      text-align: end;
+    }
+  }
+}
