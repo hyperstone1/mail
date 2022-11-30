@@ -8,11 +8,13 @@ import Button from 'react-bootstrap/Button';
 import { simulateLoading } from '../utils/loading';
 import Context from '../utils/context/Context';
 
-const FormModal = ({ show, handleClose }) => {
+const FormModal = ({ show, setShow }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState('');
   const [messageBody, setMessageBody] = useState('');
   const { users, user, receiverName, setReceiverName } = useContext(Context);
+
+  const handleClose = () => setShow(false);
 
   const onChangeReceiver = (e) => {
     setReceiverName(e.target.value);

@@ -17,7 +17,6 @@ const Menu = () => {
     messagesSended,
   } = useContext(Context);
 
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const handleShowIncoming = () => {
@@ -31,7 +30,7 @@ const Menu = () => {
 
   return (
     <div>
-      <FormModal show={show} handleClose={handleClose} />
+      <FormModal show={show} setShow={setShow}  />
       <Nav variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
           <Nav.Link

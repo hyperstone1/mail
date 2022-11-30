@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
 import { Navigate } from 'react-router-dom';
 import { getMessagesReceived, getMessagesSended, getUsers } from '../../http/userAPI';
 import moment from 'moment';
 import Accordion from 'react-bootstrap/Accordion';
 import './index.scss';
 import Swal from 'sweetalert2';
-import { simulateLoading } from '../../utils/loading';
 import Menu from '../../components/Menu';
-
 import Header from '../../components/Header';
 import Context from '../../utils/context/Context';
 
@@ -24,7 +21,6 @@ const Profile = () => {
 
   useEffect(() => {
     fetchData();
-    console.log(users);
   }, []);
 
   useEffect(() => {

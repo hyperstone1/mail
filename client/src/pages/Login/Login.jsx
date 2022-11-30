@@ -4,18 +4,16 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
-import { simulateLoading } from '../../utils/loading';
 import './index.scss';
 
 const Login = () => {
   const [name, setName] = useState('');
-  const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     if (isLoading) {
       simulateLoading().then(() => {
-        navigate('/profile');
+        useNavigate('/profile');
         setLoading(false);
       });
     }
@@ -23,7 +21,7 @@ const Login = () => {
 
   const handleClick = () => {
     localStorage.setItem('name', name);
-    const user = axios.post('http://localhost:5000/chat/user/login', { name });
+    axios.post('http://localhost:5000/chat/user/login', { name });
     setLoading(true);
   };
 
